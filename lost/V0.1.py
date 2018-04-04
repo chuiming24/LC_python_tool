@@ -1,15 +1,9 @@
-# -*- coding: utf-8 -*- 
 from tkinter import *
 import webbrowser
 import pyperclip
 import threading as mp
 import ctypes
 import time
-from bs4 import BeautifulSoup
-import requests
-import re
-
-
 
 
 #获取剪切板内容
@@ -46,8 +40,6 @@ class App:
 
         #self.p1 = mp.Thread(target = getTextb, args = (1,))
 
-        self.flag = True
-
         self.input = Entry(frame)
         self.input.pack(side=TOP)
         self.input.bind('<Key-Return>', self.say_seach)
@@ -66,8 +58,6 @@ class App:
         self.hi_there = Button(frame, text="新后台", command=self.say_newadmin)
         self.hi_there.pack(side=LEFT)
         
-        self.hi_there = Button(frame, text="编号网页", command=self.say_codehtml)
-        self.hi_there.pack(side=LEFT)        
 
     def say_hi(self):
         print("hi there, everyone!")
@@ -75,53 +65,16 @@ class App:
         webbrowser.open('http://so.szlcsc.com/global.html?c=&k='+self.input.get())
 
     def say_seach(self, event):
-        self.say_codehtml()
+        print("hi there, everyone!")
+        print(self.input.get())
+        webbrowser.open('http://so.szlcsc.com/global.html?c=&k='+self.input.get())
 
 
     def say_newadmin(self):
         webbrowser.open('https://erp.szlcsc.com/#/')
 
-    def say_codehtml(self):
-        self.flag = True
-        count = 0;
-        urlf = ''
-        url = 'http://so.szlcsc.com/global.html?c=&k='+self.input.get()
-        r = requests.get(url)
-        html = r.text
-        #html = urlopen(url).read().decode('gbk')
-        soup = BeautifulSoup(html, features='lxml')
-        
-        all_href = ''
-        for link in soup.find_all('a'):
-            all_href = link.get('href')
-            if(type(all_href) == str):
-                if 'item' in all_href:
-                    urlf = all_href
-                    
-                    print(all_href)
-                    self.flag = False
-                    break
-                
-        for link in soup.find_all('a'):
-            all_href = link.get('href')                
-            if(type(all_href) == str):
-                if 'item' in all_href:
-                    count = count + 1                
-                if(count > 4):
-                    self.flag = True
-                    break
-            
-        if(self.flag):     
-            self.say_hi()
-            print(self.input.get())
-        else:
-            webbrowser.open(urlf) 
-        
-        
-        
 
 if __name__=='__main__':
-    
     whnd = ctypes.windll.kernel32.GetConsoleWindow()  
     if whnd != 0:  
         ctypes.windll.user32.ShowWindow(whnd, 0)  
