@@ -12516,3 +12516,8 @@ if (webSiteShareData.detailsFlag) {
 	productGuideModule.init();
 	detailModule.init()
 };
+
+
+//http://www.szlcsc.com/order/OrderCommonAction!selectProductPDFAndPCBListJsonp.action?callback=%27loadFilePDFData%27&annexNumber=C6CB5D2846460653296C67311B688FC3&callback=jQuery183014143773355556677_1522834983842&_=1522835034347
+
+//param-click="C6CB5D2846460653296C67311B688FC3
