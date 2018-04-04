@@ -8,7 +8,7 @@ python 3.6
 直接运行源目录下的py文件即可
 
 ####3.使用说明
-![76ABP_5{3TRTUW}6NKH0BJV](C:\Users\Administrator\Desktop\LC_python_tool\image\rd01.jpg)
+![rd01](.\image\rd01.jpg)
 文本框输入搜索，回车或点击查找商品即可打开浏览器
 
 ####4.目录结构描述
