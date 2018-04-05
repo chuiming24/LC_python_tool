@@ -8,6 +8,7 @@ import time
 from bs4 import BeautifulSoup
 import requests
 import re
+import json
 
 
 
@@ -88,18 +89,21 @@ class App:
         url = 'http://item.szlcsc.com/210732.html'
         r = requests.get(url)
         html = r.text
-        #html = urlopen(url).read().decode('gbk')
         soup = BeautifulSoup(html, features='lxml')
         
         all_href = ''
-        for link in soup.find_all('a'):
-            all_href = link.get('href')
-            if(type(all_href) == str):
-                if '.pdf' in all_href:
-                    print(all_href)
-    
-        
-        
+        link = soup.find_all('span', attrs={'id':'downloadFile'})
+        print(link)
+        for i in link:
+            getid = i.get('param-click')
+
+        url = r'http://www.szlcsc.com/order/OrderCommonAction!selectProductPDFAndPCBListJsonp.action?callback=%27loadFilePDFData%27&annexNumber='+getid+'&callback=jQuery183014143773355556677_1522834983842&_=1522835034347'
+        r = requests.get(url)
+        html = r.content.decode()[61:-1]
+        html = json.loads(html)
+        html = html['fileList'][0]
+        print(html['annexNumber'])
+        webbrowser.open(r'http://www.szlcsc.com/product/pdf/A_' + html['annexNumber'] + r'.PDF')
         
 
 if __name__=='__main__':
