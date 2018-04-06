@@ -8,7 +8,7 @@ import time
 from bs4 import BeautifulSoup
 import requests
 import re
-
+import json
 
 
 
@@ -67,7 +67,27 @@ class App:
         self.hi_there.pack(side=LEFT)
         
         self.hi_there = Button(frame, text="编号网页", command=self.say_codehtml)
-        self.hi_there.pack(side=LEFT)        
+        self.hi_there.pack(side=LEFT)
+
+    def get_pdf(self, url):
+        r = requests.get(url)
+        html = r.text
+        soup = BeautifulSoup(html, features='lxml')
+        
+        all_href = ''
+        link = soup.find_all('span', attrs={'id':'downloadFile'})
+        print(link)
+        for i in link:
+            getid = i.get('param-click')
+
+        url = r'http://www.szlcsc.com/order/OrderCommonAction!selectProductPDFAndPCBListJsonp.action?callback=%27loadFilePDFData%27&annexNumber='+getid+'&callback=jQuery183014143773355556677_1522834983842&_=1522835034347'
+        r = requests.get(url)
+        html = r.content.decode()[61:-1]
+        html = json.loads(html)
+        html = html['fileList'][0]
+        print(html['annexNumber'])
+        webbrowser.open(r'http://www.szlcsc.com/product/pdf/A_' + html['annexNumber'] + r'.PDF')
+        
 
     def say_hi(self):
         print("hi there, everyone!")
@@ -115,7 +135,8 @@ class App:
             self.say_hi()
             print(self.input.get())
         else:
-            webbrowser.open(urlf) 
+            webbrowser.open(urlf)
+            self.get_pdf(urlf)
         
         
         
