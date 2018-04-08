@@ -86,24 +86,25 @@ class App:
         self.flag = True
         count = 0;
         urlf = ''
-        url = 'http://item.szlcsc.com/210732.html'
+        url = 'http://list.szlcsc.com/catalog/470.html'
         r = requests.get(url)
         html = r.text
+        print(html)
         soup = BeautifulSoup(html, features='lxml')
         
-        all_href = ''
-        link = soup.find_all('span', attrs={'id':'downloadFile'})
-        print(link)
-        for i in link:
-            getid = i.get('param-click')
+        #all_href = ''
+        #link = soup.find_all('span', attrs={'id':'downloadFile'})
+        #print(link)
+        #for i in link:
+        #    getid = i.get('param-click')
 
-        url = r'http://www.szlcsc.com/order/OrderCommonAction!selectProductPDFAndPCBListJsonp.action?callback=%27loadFilePDFData%27&annexNumber='+getid+'&callback=jQuery183014143773355556677_1522834983842&_=1522835034347'
-        r = requests.get(url)
-        html = r.content.decode()[61:-1]
-        html = json.loads(html)
-        html = html['fileList'][0]
-        print(html['annexNumber'])
-        webbrowser.open(r'http://www.szlcsc.com/product/pdf/A_' + html['annexNumber'] + r'.PDF')
+        #url = r'http://www.szlcsc.com/order/OrderCommonAction!selectProductPDFAndPCBListJsonp.action?callback=%27loadFilePDFData%27&annexNumber='+getid+'&callback=jQuery183014143773355556677_1522834983842&_=1522835034347'
+        #r = requests.get(url)
+        #html = r.content.decode()[61:-1]
+        #html = json.loads(html)
+        #html = html['fileList'][0]
+        #print(html['annexNumber'])
+        #webbrowser.open(r'http://www.szlcsc.com/product/pdf/A_' + html['annexNumber'] + r'.PDF')
         
 
 if __name__=='__main__':
