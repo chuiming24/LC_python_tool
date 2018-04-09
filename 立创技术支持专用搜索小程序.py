@@ -31,27 +31,6 @@ def getTextb(a):
     
 
 
-
-
-class set_App:
-
-    def __init__(self, master):
-        frame = Frame(master)
-        frame.pack()
-
-
-        self.hi_there = Button(frame, text="新后台", command=self.say_newadmin)
-        self.hi_there.pack(side=TOP)
-
-        self.button = Button(
-            frame, text="退出", fg="red", command=frame.quit
-            )
-        self.button.pack(side=TOP)
-
-    def say_newadmin(self):
-        webbrowser.open('https://erp.szlcsc.com/#/')
-
-
 class App:
 
     def __init__(self, master):
@@ -84,17 +63,12 @@ class App:
         #self.hi_there = Button(frame, text="监督剪切板", command=self.p1.start())
         #self.hi_there.pack(side=LEFT)
         
+        self.hi_there = Button(frame, text="新后台", command=self.say_newadmin)
+        self.hi_there.pack(side=LEFT)
         
         self.hi_there = Button(frame, text="编号网页", command=self.say_codehtml)
         self.hi_there.pack(side=LEFT)
 
-        self.hi_there = Button(frame, text="设置", command=self.show_set)
-        self.hi_there.pack(side=LEFT)
-
-    def show_set(self):
-        get = Tk()
-        set_App(get)
-        
     def get_pdf(self, url):
         r = requests.get(url)
         html = r.text
@@ -123,6 +97,9 @@ class App:
     def say_seach(self, event):
         self.say_codehtml()
 
+
+    def say_newadmin(self):
+        webbrowser.open('https://erp.szlcsc.com/#/')
 
     def say_codehtml(self):
         self.flag = True
