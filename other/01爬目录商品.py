@@ -12,7 +12,7 @@ import os
 #商品目录地址
 con_index = 'http://list.szlcsc.com/catalog/582.html'
 #商品目录一共几页
-index_num = 2
+index_num = 37
 
 txtName = "codingWord.txt"
 f=open(txtName, "a+")
