@@ -106,7 +106,7 @@ class MyBrowser(QWidget):
             
 
     def createLayout(self):
-        self.setWindowTitle("keakon's browser")
+        self.setWindowTitle("立创商品对比用程序")
 
         self.addressBar = QLineEdit()
         self.goButton1 = QPushButton("&打开网页")
