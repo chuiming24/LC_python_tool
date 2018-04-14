@@ -4,4 +4,5 @@ pip install beautifulsoup4
 pip install lxml	
 pip install requests
 pip install selenium
+pip install PyQt5
 pause
