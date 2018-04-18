@@ -118,11 +118,11 @@ class MyBrowser(QWidget):
         layout = QGridLayout()
 
         #将控件添加到布局中
-        layout.addWidget(self.addressBar, 0, 0, 1, 18)
-        layout.addWidget(self.goButton1, 0, 19, 1, 1)
-        layout.addWidget(self.goButton2, 0, 20, 1, 1)
-        layout.addWidget(self.webView1, 1, 0, 5, 10)
-        layout.addWidget(self.webView2, 1, 10, 5, 20)
+        layout.addWidget(self.addressBar, 0, 0, 1, 36)
+        layout.addWidget(self.goButton1, 0, 37, 1, 1)
+        layout.addWidget(self.goButton2, 0, 39, 1, 1)
+        layout.addWidget(self.webView1, 1, 0, 5, 20)
+        layout.addWidget(self.webView2, 1, 20, 5, 39)
 
         self.setLayout(layout)
 
