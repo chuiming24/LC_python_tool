@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>882</width>
+    <height>392</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>客户投诉记录</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>50</y>
+     <width>811</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>已经解决</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>今日解决</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>客户编号</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>客户等级</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>客户称呼</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>投诉商品</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>购买数量</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>购买次数</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>新建列</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>投诉内容</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string/>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="pushButton_appped_2">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>340</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>查看</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_appped">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>340</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>增加</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

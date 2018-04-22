@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1037</width>
+    <height>331</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>投诉情况</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>850</x>
+     <y>290</y>
+     <width>140</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>储存</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>10</y>
+     <width>280</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label_CostomerNumber">
+        <property name="text">
+         <string>客户编号</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_CostomerNumber"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_CostomerLsevel">
+        <property name="text">
+         <string>客户等级</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox_CostormerLevel">
+        <item>
+         <property name="text">
+          <string>铜牌会员</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>银牌会员</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>金牌会员</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>钻石会员</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>皇冠会员</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_CostomerName">
+        <property name="text">
+         <string>客户称呼</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_CostomerName"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QLabel" name="label_ComplainsGood">
+        <property name="text">
+         <string>投诉商品</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_ComplainsGoods"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QLabel" name="label_Quantity">
+        <property name="text">
+         <string>购买数量</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_Quantity"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <widget class="QLabel" name="label_PurchaseTimes">
+        <property name="text">
+         <string>购买次数</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_PurchaseTimes"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <item>
+       <widget class="QLabel" name="label_GoodsBusiness">
+        <property name="text">
+         <string>对应商家</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_GoodsBusiness"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>280</y>
+     <width>731</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_10">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_9">
+      <item>
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>今日是否解决</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox_TodayStats">
+        <item>
+         <property name="text">
+          <string>是</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>否</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>是否完全解决</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox_Stats">
+        <item>
+         <property name="text">
+          <string>是</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>否</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>10</y>
+     <width>671</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_8">
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>客户投诉内容</string>
+      </property>
+      <widget class="QTextEdit" name="textEdit_ComplainsDetails">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>201</width>
+         <height>221</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="title">
+       <string>询问进展</string>
+      </property>
+      <widget class="QTextEdit" name="textEdit_Evolve">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>201</width>
+         <height>221</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="title">
+       <string>情况判断</string>
+      </property>
+      <widget class="QTextEdit" name="textEdit_Situation">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>201</width>
+         <height>221</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
