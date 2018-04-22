@@ -21,6 +21,7 @@ from main_gui import *
 
 
 if __name__=='__main__':
+        
     app = QApplication(sys.argv)
 
     browser = Mian_Gui()
