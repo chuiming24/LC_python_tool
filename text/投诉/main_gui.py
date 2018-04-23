@@ -101,10 +101,14 @@ class Ui_Form(object):
 
     def createConnection(self, Form):
         Form.connect(self.pushButton_appped_2, QtCore.SIGNAL('clicked()'), self.search)
-        Form.connect(self.pushButton_appped, QtCore.SIGNAL('clicked()'), self.seach_gui_windows.show)
+        Form.connect(self.pushButton_appped, QtCore.SIGNAL('clicked()'), self.addDat)
         
     def search(self):
         self.seach_gui_windows.setInit()
         self.seach_gui_windows.show()
-
+        
         print("获取到了")
+
+    def addDat(self):
+        self.tableWidget.setHorizontalHeaderLabels(['SUN','MON','TUE','WED',  'THU','FIR','SAT'])
+        
