@@ -34,10 +34,11 @@ class Ui_Form(object):
         Form.setObjectName(_fromUtf8("Form"))
         Form.resize(882, 392)
         self.tableWidget = QtGui.QTableWidget(Form)
+        self.tableWidget.setEditTriggers(QtGui.QAbstractItemView.NoEditTriggers)
         self.tableWidget.setGeometry(QtCore.QRect(30, 50, 811, 271))
         self.tableWidget.setObjectName(_fromUtf8("tableWidget"))
         self.tableWidget.setColumnCount(11)
-        self.tableWidget.setRowCount(0)
+        self.tableWidget.setRowCount(10)
         item = QtGui.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(0, item)
         item = QtGui.QTableWidgetItem()
@@ -110,5 +111,7 @@ class Ui_Form(object):
         print("获取到了")
 
     def addDat(self):
-        self.tableWidget.setHorizontalHeaderLabels(['SUN','MON','TUE','WED',  'THU','FIR','SAT'])
-        
+        self.newItem = QtGui.QTableWidgetItem('Item')  
+        self.tableWidget.setItem(1,2,self.newItem)
+        self.tableWidget.setRowCount(5)        
+        print(self.tableWidget.currentRow())
