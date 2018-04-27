@@ -67,7 +67,9 @@ class Ui_Form(object):
         self.pushButton_appped = QtGui.QPushButton(Form)
         self.pushButton_appped.setGeometry(QtCore.QRect(600, 340, 101, 31))
         self.pushButton_appped.setObjectName(_fromUtf8("pushButton_appped"))
-
+        self.pushButton_appped3 = QtGui.QPushButton(Form)
+        self.pushButton_appped3.setGeometry(QtCore.QRect(450, 340, 101, 31))
+        self.pushButton_appped3.setObjectName(_fromUtf8("pushButton_appped"))
         self.seach_gui_windows = Seach_Gui() 
         
         self.retranslateUi(Form)
@@ -98,7 +100,7 @@ class Ui_Form(object):
         item.setText(_translate("Form", "投诉内容", None))
         self.pushButton_appped_2.setText(_translate("Form", "查看", None))
         self.pushButton_appped.setText(_translate("Form", "增加", None))
-
+        self.pushButton_appped3.setText(_translate("Form", "刷新", None))
 
     def createConnection(self, Form):
         Form.connect(self.pushButton_appped_2, QtCore.SIGNAL('clicked()'), self.search)
